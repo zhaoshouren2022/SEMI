@@ -1,0 +1,76 @@
+site_name: SEMI笔记
+site_description: 半导体 SEMI 协议学习笔记
+site_url: https://zhaoshouren2022.github.io/SEMI/
+
+theme:
+  name: material
+  language: zh
+  font: false
+  icon:
+    logo: material/book-open-variant
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换到暗色模式
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到亮色模式
+  features:
+    - navigation.sections
+    - navigation.footer
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tilde
+
+plugins:
+  - search
+
+extra_javascript:
+  - assets/javascripts/mermaid.min.js
+  - assets/javascripts/mermaid-init.js
+
+nav:
+  - 首页: index.md
+  - E37 HSMS 高速消息服务:
+    - 总览: notes/e37-hsms/index.md
+    - 通信模型: notes/e37-hsms/communication.md
+    - 状态机: notes/e37-hsms/state-machine.md
+    - 消息交换过程: notes/e37-hsms/procedures.md
+    - 消息格式: notes/e37-hsms/message-format.md
+    - 定时器与参数: notes/e37-hsms/timers.md
+    - E37.1 HSMS-SS: notes/e37-hsms/hsms-ss.md
+    - E37.2 HSMS-GS: notes/e37-hsms/hsms-gs.md
+    - SECS-I 与 HSMS 对比: notes/e37-hsms/secs-vs-hsms.md
+    - FAQ: notes/e37-hsms/faq.md

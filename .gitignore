@@ -1,0 +1,17 @@
+# Python / uv
+.venv/
+.venv-python39/
+__pycache__/
+*.pyc
+
+# MkDocs 构建产物（可用 make build 重新生成）
+site/
+
+# 原始资料（SEMI 标准有版权，不随仓库上传）
+pdf/
+
+# 工具本地配置
+.qwen/
+
+# macOS
+.DS_Store
