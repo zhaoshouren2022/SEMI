@@ -14,6 +14,8 @@
 
 ## 标准家族
 
+### SECS/GEM
+
 ```mermaid
 flowchart LR
     subgraph 家族["SECS/GEM 标准家族"]
@@ -32,13 +34,31 @@ flowchart LR
 | **E37 HSMS** | TCP/IP 传输层，替代 SECS-I | ✅ 已整理（[进入专题](notes/e37-hsms/index.md)） |
 | E4 SECS-I | 串口传输层 RS-232 | 部分涉及（见 [SECS-I 与 HSMS 对比](notes/e37-hsms/secs-vs-hsms.md)） |
 | E5 SECS-II | 消息内容（S1F1…SxFy） | ⏳ 计划中 |
-| E30 GEM | 设备通用行为模型 | ⏳ 计划中 |
+| **E30 GEM** | 设备通用行为模型 | ✅ 已整理（[进入专题](notes/e30/index.md)） |
+
+### EFEM / 载具管理相关标准（E8x 组）
+
+围绕 **EFEM（设备前端模块）与载具（FOUP）自动化**的一组标准——从"载具怎么交接"（信号层）到"载具状态怎么管"（软件层），再到"晶圆在哪儿 / 作业怎么组织"（内容层）：
+
+| 标准 | 角色 | 层级 | 笔记状态 |
+| --- | --- | --- | --- |
+| **E84** | Enhanced Carrier Handoff Parallel I/O——载具交接并行 I/O 握手（装载端口 ↔ OHT/搬运设备） | 信号层 | ✅ 熟悉，待整理 |
+| **E87 CMS** | Carrier Management——载具管理：FOUP 在装载端口的状态模型与事件 | 软件层 | ✅ 熟悉，待整理 |
+| E90 | Substrate Mapping——晶圆映射（FOUP 内晶圆位置） | 内容层 | ⏳ 计划中 |
+| E94 CJM | Control Job Management——控制作业管理（组合多个工艺作业） | 调度层 | ⏳ 计划中 |
+| E62 | Load Port Operation——装载端口操作（对接/开门/映射/交接） | 端口行为 | ⏳ 计划中 |
+| E19 / E47.1 | FOUP 机械接口（FIM）/ 300mm 载具机械规格 | 机械层 | ⏳ 计划中 |
+| E23 | Cassette Transfer Parallel I/O——E84 的 200mm 前身 | 信号层（历史） | 提及即可 |
+| E88 | AMHS Storage SEM（Stocker）——仓库设备专用模型 | SEM 体系 | 可选 |
+
+> 注：E84 与 E87 是 EFEM 集成的核心搭档——**E84 管"交接握手"（硬件信号），E87 管"载具状态"（软件事件）**；E90/E94 通常与其配套部署（业界常合称 GEM300 的载具管理扩展）。
 
 ## 阅读路线
 
-- **新读者**：从 E37 专题的 [总览](notes/e37-hsms/index.md) 开始，按"① → ⑦"的顺序阅读，约一小时建立 HSMS-SS 全貌；
-- **当工具书用**：查字段去 [消息格式](notes/e37-hsms/message-format.md)，查超时去 [定时器与参数](notes/e37-hsms/timers.md)，查对比去 [SECS-I 与 HSMS 对比](notes/e37-hsms/secs-vs-hsms.md)；
-- **查疑答疑**：[FAQ](notes/e37-hsms/faq.md) 汇集学习中的高频疑问，答案标注标准出处。
+- **新读者（E37）**：从 [E37 总览](notes/e37-hsms/index.md) 开始，按"① → ⑦"的顺序阅读，约一小时建立 HSMS-SS 全貌；
+- **新读者（E30）**：从 [E30 总览](notes/e30/index.md) 开始，先看[状态模型](notes/e30/state-models.md)的三个状态图，再沿"建立通信 → 事件通知 → 数据采集 → 报警 → 远程控制 → 工艺程序"主线展开；
+- **当工具书用**：查字段去 [消息格式](notes/e37-hsms/message-format.md)，查超时去 [定时器与参数](notes/e37-hsms/timers.md)，查对比去 [SECS-I 与 HSMS 对比](notes/e37-hsms/secs-vs-hsms.md)，查合规判定去 [GEM 合规](notes/e30/compliance.md)；
+- **查疑答疑**：[E37 FAQ](notes/e37-hsms/faq.md) 与 [E30 FAQ](notes/e30/faq.md) 汇集学习中的高频疑问，答案标注标准出处。
 
 ## 快速入口
 
@@ -52,3 +72,7 @@ flowchart LR
 | [定时器与参数](notes/e37-hsms/timers.md) | T3 / T5 / T6 / T7 / T8 与超时后果 |
 | [E37.1 HSMS-SS](notes/e37-hsms/hsms-ss.md) | 单会话简化版（重点） |
 | [FAQ](notes/e37-hsms/faq.md) | 高频疑问答疑 |
+| [E30 GEM 总览](notes/e30/index.md) | GEM 定位、两种要求、标准结构 |
+| [状态模型](notes/e30/state-models.md) | 通信 / 控制 / 加工 三个状态图 |
+| [事件通知](notes/e30/event-reporting.md) | S6F11 自动上报与报告动态配置 |
+| [GEM 合规](notes/e30/compliance.md) | 逐能力合规判定与声明表 |

@@ -74,3 +74,15 @@ nav:
     - E37.2 HSMS-GS: notes/e37-hsms/hsms-gs.md
     - SECS-I 与 HSMS 对比: notes/e37-hsms/secs-vs-hsms.md
     - FAQ: notes/e37-hsms/faq.md
+  - E30 GEM 通用模型:
+    - 总览: notes/e30/index.md
+    - 状态模型: notes/e30/state-models.md
+    - 建立通信: notes/e30/communication.md
+    - 事件通知: notes/e30/event-reporting.md
+    - 数据采集: notes/e30/data-collection.md
+    - 报警管理: notes/e30/alarm-management.md
+    - 远程控制: notes/e30/remote-control.md
+    - 工艺程序与配方: notes/e30/process-programs.md
+    - 其他能力: notes/e30/other-capabilities.md
+    - GEM 合规: notes/e30/compliance.md
+    - FAQ: notes/e30/faq.md
