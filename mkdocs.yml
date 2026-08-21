@@ -62,8 +62,8 @@ extra_javascript:
   - assets/javascripts/mermaid-init.js
 
 nav:
-  - 首页: index.md
-  - E37 HSMS 高速消息服务:
+  - 引言: index.md
+  - E37 HSMS :
     - 总览: notes/e37-hsms/index.md
     - 通信模型: notes/e37-hsms/communication.md
     - 状态机: notes/e37-hsms/state-machine.md
@@ -74,7 +74,7 @@ nav:
     - E37.2 HSMS-GS: notes/e37-hsms/hsms-gs.md
     - SECS-I 与 HSMS 对比: notes/e37-hsms/secs-vs-hsms.md
     - FAQ: notes/e37-hsms/faq.md
-  - E30 GEM 通用模型:
+  - E30 GEM :
     - 总览: notes/e30/index.md
     - 状态模型: notes/e30/state-models.md
     - 建立通信: notes/e30/communication.md
@@ -86,3 +86,6 @@ nav:
     - 其他能力: notes/e30/other-capabilities.md
     - GEM 合规: notes/e30/compliance.md
     - FAQ: notes/e30/faq.md
+
+extra_css:
+  - assets/stylesheets/extra.css
