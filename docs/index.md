@@ -52,7 +52,7 @@ flowchart LR
 | --- | --- | --- |
 | **`E37 HSMS`** | `TCP/IP` 传输层，替代 `SECS-I` | ✅ 已整理（[进入专题](notes/e37-hsms/index.md)） |
 | `E4 SECS-I` | 串口传输层 `RS-232` | 部分涉及（见 [SECS-I 与 HSMS 对比](notes/e37-hsms/secs-vs-hsms.md)） |
-| `E5 SECS-II` | 消息内容（`S1F1…SxFy`） | ⏳ 计划中 |
+| `E5 SECS-II` | 消息内容（`S1F1…SxFy`） | ✅ 已整理（[进入专题](notes/e5/index.md)） |
 | **`E30 GEM`** | 设备通用行为模型 | ✅ 已整理（[进入专题](notes/e30/index.md)） |
 
 ### `EFEM` / 载具管理
@@ -61,8 +61,8 @@ flowchart LR
 
 | 标准 | 角色 | 层级 | 笔记状态 |
 | --- | --- | --- | --- |
-| **`E84`** | E`nhanced Carrier Handoff Parallel I/O`——载具交接并行 `I/O` 握手（装载端口 ↔ `OHT`/搬运设备） | 信号层 | ✅ 熟悉，待整理 |
-| **`E87 CMS`** | `Carrier Management`——载具管理：`FOUP` 在装载端口的状态模型与事件 | 软件层 | ✅ 熟悉，待整理 |
+| **`E84`** | `Enhanced Carrier Handoff Parallel I/O`——载具交接并行 `I/O` 握手（装载端口 ↔ `OHT`/搬运设备） | 信号层 | ✅ 已整理（[进入专题](notes/e84/index.md)） |
+| **`E87 CMS`** | `Carrier Management`——载具管理：`FOUP` 在装载端口的状态模型与事件 | 软件层 | ✅ 已整理（[进入专题](notes/e87/index.md)） |
 | `E90` | `Substrate Mapping`——晶圆映射（`FOUP` 内晶圆位置） | 内容层 | ⏳ 计划中 |
 | `E94 CJM` | `Control Job Management`——控制作业管理（组合多个工艺作业） | 调度层 | ⏳ 计划中 |
 | `E62` | `Load Port Operation`——装载端口操作（对接/开门/映射/交接） | 端口行为 | ⏳ 计划中 |
@@ -85,3 +85,14 @@ flowchart LR
 | [状态模型](notes/e30/state-models.md) | 通信 / 控制 / 加工 三个状态图 |
 | [事件通知](notes/e30/event-reporting.md) | `S6F11` 自动上报与报告动态配置 |
 | [GEM 合规](notes/e30/compliance.md) | 逐能力合规判定与声明表 |
+| [`E5 SECS-II` 总览](notes/e5/index.md) | `SECS-II` 定位、核心概念、各流速查 |
+| [消息格式](notes/e5/message-format.md) | 消息头、分块、流功能编号 |
+| [数据结构](notes/e5/data-items.md) | `Item` / `List` / 格式码 |
+| [事务与对话协议](notes/e5/transaction.md) | `Primary/Reply`、七种对话 |
+| [`E84` 载具交接 `I/O` 总览](notes/e84/index.md) | `E84` 定位、主动/被动角色、核心能力 |
+| [信号定义](notes/e84/signals.md) | 16 个并行 `I/O` 信号、`Load Port` 分配 |
+| [交接序列](notes/e84/handoff-sequences.md) | 单/同时/连续交接的握手时序 |
+| [`E87 CMS` 总览](notes/e87/index.md) | 载具管理定位、核心概念、合规要求 |
+| [状态模型](notes/e87/state-models.md) | 五个状态机：端口/载具/模式/预留/关联 |
+| [服务](notes/e87/services.md) | `Bind`/`CarrierOut`/`ProceedWithCarrier` 等 20 个服务 |
+| [SECS-II 映射](notes/e87/secs2-mapping.md) | E87.1：服务如何落到 `S3` 消息 |

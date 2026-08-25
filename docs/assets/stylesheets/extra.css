@@ -360,3 +360,16 @@
         padding-left: 0.45rem;
     }
 }
+
+/* =========================================================
+   隐藏左侧当前页面的 TOC 入口
+   ========================================================= */
+
+@media screen and (min-width: 76.25em) {
+
+    .md-sidebar--primary
+    label.md-nav__link--active[for="__toc"] {
+
+        display: none !important;
+    }
+}

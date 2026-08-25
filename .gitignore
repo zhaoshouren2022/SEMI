@@ -15,3 +15,6 @@ pdf/
 
 # macOS
 .DS_Store
+
+# PlantUML 构建缓存
+.plantuml-cache/

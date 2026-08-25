@@ -50,6 +50,11 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - plantuml_markdown:
+      servers:
+        - https://www.plantuml.com/plantuml
+      format: svg
+      cachedir: .plantuml-cache
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tilde
@@ -74,6 +79,21 @@ nav:
     - E37.2 HSMS-GS: notes/e37-hsms/hsms-gs.md
     - SECS-I 与 HSMS 对比: notes/e37-hsms/secs-vs-hsms.md
     - FAQ: notes/e37-hsms/faq.md
+  - E5 SECS-II :
+    - 总览: notes/e5/index.md
+    - 消息格式: notes/e5/message-format.md
+    - 数据结构: notes/e5/data-items.md
+    - 事务与对话协议: notes/e5/transaction.md
+    - S1 设备状态: notes/e5/stream-1.md
+    - S2 设备控制与诊断: notes/e5/stream-2.md
+    - S3/S4 物料流: notes/e5/stream-3-4.md
+    - S5/S6 异常与数据采集: notes/e5/stream-5-6.md
+    - S7/S8 工艺与控制程序: notes/e5/stream-7-8.md
+    - S9/S10/S12/S13 各流: notes/e5/stream-9-13.md
+    - S14/S15 对象与配方: notes/e5/stream-14-15.md
+    - S16/S17/S18 各流: notes/e5/stream-16-18.md
+    - 消息文档化与单位: notes/e5/documentation.md
+    - FAQ: notes/e5/faq.md
   - E30 GEM :
     - 总览: notes/e30/index.md
     - 状态模型: notes/e30/state-models.md
@@ -86,6 +106,21 @@ nav:
     - 其他能力: notes/e30/other-capabilities.md
     - GEM 合规: notes/e30/compliance.md
     - FAQ: notes/e30/faq.md
+  - E84 载具交接并行 I/O :
+    - 总览: notes/e84/index.md
+    - 信号定义: notes/e84/signals.md
+    - 交接序列: notes/e84/handoff-sequences.md
+    - 错误检测与定时器: notes/e84/errors-timers.md
+    - 连接器与电气规格: notes/e84/interface.md
+    - FAQ: notes/e84/faq.md
+  - E87 载具管理 CMS :
+    - 总览: notes/e87/index.md
+    - 状态模型: notes/e87/state-models.md
+    - Carrier 对象与验证: notes/e87/carrier-object.md
+    - 服务: notes/e87/services.md
+    - 事件/变量/报警: notes/e87/events-alarms.md
+    - SECS-II 映射: notes/e87/secs2-mapping.md
+    - FAQ: notes/e87/faq.md
 
 extra_css:
   - assets/stylesheets/extra.css
